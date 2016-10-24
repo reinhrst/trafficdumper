@@ -83,7 +83,7 @@ def process_line(sock):
 
 def skip_day():
     intermediate_save(force=True)
-    today_date = todayutc()
+    globals()["today_date"] = todayutc()
     init_today_state()
     logger.info("New day: %s", str(today_date))
 
